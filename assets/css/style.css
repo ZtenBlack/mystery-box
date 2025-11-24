@@ -604,6 +604,7 @@ body {
     height: 100svh;
     z-index: 9999;
     background-color: rgba(0, 0, 0, .9);
+    overflow: hidden;
     display: none;
 }
 
@@ -613,6 +614,9 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    pointer-events: none;
+    overflow: hidden;
+    position: relative;
 }
 
 .modal__content {
@@ -670,12 +674,21 @@ body {
 }
 
 .confetti {
-    position: fixed;
+    position: absolute;
     pointer-events: none;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
+}
+
+.confetti-piece {
+    position: absolute;
+    top: -20px;
+    border-radius: 2px;
+    opacity: 0.9;
+    pointer-events: none;
+    z-index: -1;
 }
 
 @media screen and (max-width: 767px) {
@@ -712,6 +725,18 @@ body {
 
 @media screen and (max-width: 479px) {
     .welcome__container {
-        padding-top: 5rem;
+        padding-top: 4rem;
+    }
+    .welcome__logo {
+        margin-bottom: 1rem;
+    }
+    .welcome__subtitle {
+        font-size: 1.5rem;
+    }
+    .welcome__counter {
+        font-size: 1.5rem;
+    }
+    .welcome__box {
+        max-width: 9rem;
     }
 }

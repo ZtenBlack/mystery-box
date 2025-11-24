@@ -1,26 +1,12 @@
 $(document).ready(function () {
     //boxes code
     $(".welcome__box").on("click", function () {
-        // $(".modal").show(0);
-        updateSpinValues();
-        // setTimeout(() => {
-        //     //$(".modal").addClass("active");
-        //     $(".modal").fadeIn(200);
-        //     $(".modal__content").effect("bounce", { times: 2, distance: 50 }, 500);
-
-        //     // Запуск анимации конфетти с задержкой
-        //     $(".confetti").each(function (i) {
-        //         $(this).css("animation-delay", (i * 0.15) + "s");
-        //     });
-        // }, 10);
-    });
-    function updateSpinValues() {
         let options = [10, 20, 30];
         let free = options[Math.floor(Math.random() * options.length)];
         let total = Number("1" + free);
         $('#free-spins').text(free);
         $('#total-spins').text(total);
-    }
+    });
     //counter code
     let baseValue = 991;
     let savedValue = localStorage.getItem("liveUsers");

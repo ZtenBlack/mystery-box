@@ -1,5 +1,4 @@
 $('.welcome__box').on('click', function (i) {
-
     const box = $(this)[0].getBoundingClientRect()
     setTimeout(() => {
         $(".modal").fadeIn(200);
@@ -28,10 +27,11 @@ $('.welcome__box').on('click', function (i) {
             transform: 'translate(0, 0) scale(1) rotateX(0deg)',
             opacity: 1
         });
+        launchBackgroundConfetti();
     }, 1000);
     launchConfetti(box.left + box.width / 2, box.top + box.height / 2);
 });
-//confetti code
+//box confetti code
 function launchConfetti(x, y) {
     const container = $('<div class="confetti"></div>');
     $('.wrapper').append(container);
@@ -56,4 +56,46 @@ function launchConfetti(x, y) {
         });
     }
     setTimeout(() => container.remove(), 1500);
+}
+//modal background confetti code
+function launchBackgroundConfetti() {
+    const container = document.querySelector('.modal__wrapper');
+    const count = 300;
+    const screenW = window.innerWidth;
+    const screenH = window.innerHeight;
+    for (let i = 0; i < count; i++) {
+        const conf = document.createElement('div');
+        conf.classList.add('confetti-piece');
+        const size = Math.random() * 8 + 5;
+        conf.style.width = size + 'px';
+        conf.style.height = (size * 0.4) + 'px';
+        const startX = (screenW / count) * i + (Math.random() * 10 - 5);
+        conf.style.left = startX + 'px';
+        const delay = Math.random() * 500;
+        conf.style.backgroundColor = randomColor();
+        container.appendChild(conf);
+        const fall = conf.animate(
+            [
+                {
+                    transform: `translateY(-50px) rotate(0deg)`,
+                    opacity: 1
+                },
+                {
+                    transform: `translateY(${screenH + 10}px) rotate(${Math.random() * 720}deg)`,
+                    opacity: 0.9
+                }
+            ],
+            {
+                duration: 2000 + Math.random() * 2000, // 3–5 сек
+                easing: 'linear',
+                delay: delay,
+                iterations: 1
+            }
+        );
+        fall.onfinish = () => conf.remove();
+    }
+}
+function randomColor() {
+    const colors = ["#FFD700", "#FF4500", "#00BFFF", "#32CD32", "#FF1493"];
+    return colors[Math.floor(Math.random() * colors.length)];
 }
