@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <title>Mystery Box</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <header class="header">
+            <div class="header__container">
+                <div class="header__wrapper">
+                    <select class="header__select" name="" id="language-select">
+                        <option value="https://dmitrypetrov-dev.github.io/mystery-box-lp/">English</option>
+                        <option selected disabled value="https://dmitrypetrov-dev.github.io/mystery-box-lp/pl">Polish</option>
+                        <option value="https://dmitrypetrov-dev.github.io/mystery-box-lp/pt">Portuguese</option>
+                    </select>
+                </div>
+            </div>
+        </header>
+        <main class="page">
+            <section class="page__welcome welcome">
+                <div class="welcome__container _container">
+                    <div class="welcome__logo">
+                        <img src="../assets/images/svg/Logo.svg" alt="10black Logo">
+                    </div>
+                    <h1 class="welcome__title">DOKONAJ WYBORU</h1>
+                    <p class="welcome__subtitle">Trzy pudełka. Trzy możliwości.</p>
+                    <p class="welcome__subtitle">Jedno wyznacza twoją ścieżkę.</p>
+                    <div class="welcome__counter">
+                        <div>Wybórów dokonano:</div>
+                        <div id="counter">991</div>
+                    </div>
+                    <div class="splide">
+                        <div class="splide__track">
+                            <div class="welcome__boxes splide__list">
+                                <div class="welcome__box splide__slide">
+                                    <img src="../assets/images/box.webp" alt="Mystery box">
+                                </div>
+                                <div class="welcome__box splide__slide">
+                                    <img src="../assets/images/box.webp" alt="Mystery box">
+                                </div>
+                                <div class="welcome__box splide__slide">
+                                    <img src="../assets/images/box.webp" alt="Mystery box">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="welcome__bottom">Śpiesz się, oferta ograniczona czasowo</div>
+                </div>
+            </section>
+        </main>
+        <div class="modal">
+            <div class="modal__wrapper">
+                <div class="modal__content">
+                    <p class="modal__content-text yellow" style="margin-bottom: 1.5rem;">NAGRODA ZDOBYTA: <span id="free-spins">0</span> DARMOWYCH OBROTÓW</p>
+                    <p class="modal__content-text">Dostępne ulepszenie!</p>
+                    <p class="modal__content-text" style="margin-bottom: 1.5rem;">Dołóż je do swojego 400% Bonusu Powitalnego i zacznij z łączną sumą <span id="total-spins">0</span> FS.</p>
+                    <p class="" style="margin-bottom: 1.5rem; font-style: italic;">*Prosimy, wykonaj zrzut ekranu i wyślij go do naszego działu obsługi klienta.</p>
+                    <a class="modal__content-link" href="https://10black.net/en/promotions/mystery-welcome-bonus">Claim prize now</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../assets/js/jquery.js"></script>
+    <script src="../assets/js/jquery-ui.min.js"></script>
+    <script src="../assets/js/splide.min.js"></script>
+    <script src="../assets/js/main.js"></script>
+    <script src="../assets/js/modal-animation.js"></script>
+</body>
+
+</html>
