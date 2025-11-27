@@ -1,4 +1,10 @@
 $(document).ready(function () {
+    //welcome button code
+    $(".welcome__button").on("click", function () {
+        $(this).removeClass('active');
+        $('.welcome__wrapper').addClass('active');
+        $('.welcome__music')[0].play();
+    });
     //boxes code
     $(".welcome__box").on("click", function () {
         let options = [10, 20, 30];

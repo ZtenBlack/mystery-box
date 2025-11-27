@@ -29,43 +29,56 @@
         <main class="page">
             <section class="page__welcome welcome">
                 <div class="welcome__container _container">
-                    <div class="welcome__logo">
-                        <img src="../assets/images/svg/Logo.svg" alt="10black Logo">
-                    </div>
-                    <h1 class="welcome__title">DOKONAJ WYBORU</h1>
-                    <p class="welcome__subtitle">Trzy pudełka. Trzy możliwości.</p>
-                    <p class="welcome__subtitle">Jedno wyznacza twoją ścieżkę.</p>
-                    <div class="welcome__counter">
-                        <div>Wybórów dokonano:</div>
-                        <div id="counter">991</div>
-                    </div>
-                    <div class="splide">
-                        <div class="splide__track">
-                            <div class="welcome__boxes splide__list">
-                                <div class="welcome__box splide__slide">
-                                    <img src="../assets/images/box.webp" alt="Mystery box">
-                                </div>
-                                <div class="welcome__box splide__slide">
-                                    <img src="../assets/images/box.webp" alt="Mystery box">
-                                </div>
-                                <div class="welcome__box splide__slide">
-                                    <img src="../assets/images/box.webp" alt="Mystery box">
+                    <div class="welcome__wrapper">
+                        <div class="welcome__logo">
+                            <img src="../assets/images/svg/Logo.svg" alt="10black Logo">
+                        </div>
+                        <h1 class="welcome__title">DOKONAJ WYBORU</h1>
+                        <p class="welcome__subtitle">Trzy pudełka. Trzy możliwości.</p>
+                        <p class="welcome__subtitle">Jedno wyznacza twoją ścieżkę.</p>
+                        <div class="welcome__counter">
+                            <div>Wybórów dokonano:</div>
+                            <div id="counter">991</div>
+                        </div>
+                        <div class="splide">
+                            <div class="splide__track">
+                                <div class="welcome__boxes splide__list">
+                                    <div class="welcome__box splide__slide">
+                                        <img src="../assets/images/box.webp" alt="Mystery box">
+                                    </div>
+                                    <div class="welcome__box splide__slide">
+                                        <img src="../assets/images/box.webp" alt="Mystery box">
+                                    </div>
+                                    <div class="welcome__box splide__slide">
+                                        <img src="../assets/images/box.webp" alt="Mystery box">
+                                    </div>
                                 </div>
                             </div>
                         </div>
+                        <div class="welcome__bottom">Śpiesz się, oferta ograniczona czasowo</div>
                     </div>
-                    <div class="welcome__bottom">Śpiesz się, oferta ograniczona czasowo</div>
+                    <button class="welcome__button active">Click to continue...</button>
                 </div>
+                <video class="welcome__background" autoplay muted loop playsinline>
+                    <source src="../assets/video/background.mp4" type="video/mp4" />
+                </video>
+                <audio class="welcome__music">
+                    <source src="../assets/sound/music.mp3" type="audio/mpeg">
+                </audio>
             </section>
         </main>
         <div class="modal">
             <div class="modal__wrapper">
                 <div class="modal__content">
-                    <p class="modal__content-text yellow" style="margin-bottom: 1.5rem;">NAGRODA ZDOBYTA: <span id="free-spins">0</span> DARMOWYCH OBROTÓW</p>
+                    <p class="modal__content-text yellow" style="margin-bottom: 1.5rem;">NAGRODA ZDOBYTA: <span
+                            id="free-spins">0</span> DARMOWYCH OBROTÓW</p>
                     <p class="modal__content-text">Dostępne ulepszenie!</p>
-                    <p class="modal__content-text" style="margin-bottom: 1.5rem;">Dołóż je do swojego 400% Bonusu Powitalnego i zacznij z łączną sumą <span id="total-spins">0</span> FS.</p>
-                    <p class="" style="margin-bottom: 1.5rem; font-style: italic;">*Prosimy, wykonaj zrzut ekranu i wyślij go do naszego działu obsługi klienta.</p>
-                    <a class="modal__content-link" href="https://10black.net/en/promotions/mystery-welcome-bonus">Claim prize now</a>
+                    <p class="modal__content-text" style="margin-bottom: 1.5rem;">Dołóż je do swojego 400% Bonusu
+                        Powitalnego i zacznij z łączną sumą <span id="total-spins">0</span> FS.</p>
+                    <p class="" style="margin-bottom: 1.5rem; font-style: italic;">*Prosimy, wykonaj zrzut ekranu i
+                        wyślij go do naszego działu obsługi klienta.</p>
+                    <a class="modal__content-link" href="https://10black.net/en/promotions/mystery-welcome-bonus">Claim
+                        prize now</a>
                 </div>
             </div>
         </div>

@@ -434,6 +434,7 @@ body {
     top: 0;
     left: 0;
     right: 0;
+    z-index: 1;
 }
 
 .header__container {
@@ -466,13 +467,22 @@ body {
     padding: 2rem 1.25rem;
 }
 
+.welcome__wrapper {
+    width: 100%;
+    display: none;
+}
+
+.welcome__wrapper.active {
+    display: block;
+}
+
 .page__welcome {
-    background: url(../images/hero-bg.webp) center no-repeat;
-    background-size: cover;
+    width: 100%;
     height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    position: relative;
 }
 
 .welcome__logo {
@@ -509,6 +519,35 @@ body {
     -webkit-text-fill-color: transparent;
     margin-top: 1.125rem;
     margin-bottom: 0.625rem;
+}
+
+.welcome__background {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    object-fit: cover;
+}
+
+.welcome__music {
+    display: none;
+}
+
+.welcome__button {
+    color: #000;
+    background-color: #FCE301;
+    font-size: 1.5rem;
+    font-weight: 800;
+    border-radius: 0.9375rem;
+    padding: 0.75rem 2.0625rem 0.75rem 2.0625rem;
+    cursor: pointer;
+    display: none;
+}
+
+.welcome__button.active {
+    display: inline-block;
 }
 
 .splide__pagination {
@@ -729,15 +768,19 @@ body {
     .welcome__container {
         padding-top: 4rem;
     }
+
     .welcome__logo {
         margin-bottom: 1rem;
     }
+
     .welcome__subtitle {
         font-size: 1.5rem;
     }
+
     .welcome__counter {
         font-size: 1.5rem;
     }
+
     .welcome__box {
         max-width: 9rem;
     }
