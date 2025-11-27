@@ -548,6 +548,10 @@ body {
     object-fit: cover;
 }
 
+#overlay-video {
+    z-index: 10;
+}
+
 .welcome__music {
     display: none;
 }

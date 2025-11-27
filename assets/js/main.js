@@ -1,5 +1,8 @@
 $(document).ready(function () {
     //welcome button code
+    setTimeout(() => {
+        $("#overlay-video").fadeOut();
+    }, 4500);
     $(".welcome__button").on("click", function () {
         $('.welcome__overlay').removeClass('active');
         $('.welcome__music')[0].play();
