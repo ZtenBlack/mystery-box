@@ -655,7 +655,6 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    pointer-events: none;
     overflow: hidden;
     position: relative;
 }
