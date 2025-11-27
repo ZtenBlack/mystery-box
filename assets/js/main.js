@@ -1,8 +1,7 @@
 $(document).ready(function () {
     //welcome button code
     $(".welcome__button").on("click", function () {
-        $(this).removeClass('active');
-        $('.welcome__wrapper').addClass('active');
+        $('.welcome__overlay').removeClass('active');
         $('.welcome__music')[0].play();
     });
     //boxes code

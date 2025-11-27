@@ -469,7 +469,6 @@ body {
 
 .welcome__wrapper {
     width: 100%;
-    display: none;
 }
 
 .welcome__wrapper.active {
@@ -483,6 +482,24 @@ body {
     flex-direction: column;
     justify-content: center;
     position: relative;
+}
+
+.welcome__overlay {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(5px);
+    display: none;
+}
+
+.welcome__overlay.active {
+    display: flex;
 }
 
 .welcome__logo {
@@ -537,13 +554,15 @@ body {
 
 .welcome__button {
     color: #000;
-    background-color: #FCE301;
+    background-color: #000;
     font-size: 1.5rem;
-    font-weight: 800;
+    font-weight: 500;
     border-radius: 0.9375rem;
-    padding: 0.75rem 2.0625rem 0.75rem 2.0625rem;
+    padding: 0.75rem 5rem 0.75rem 5rem;
     cursor: pointer;
-    display: none;
+    text-transform: uppercase;
+    color: #fff;
+    border: 1px solid #fff;
 }
 
 .welcome__button.active {
