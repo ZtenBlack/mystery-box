@@ -28,6 +28,12 @@
         </header>
         <main class="page">
             <section class="page__welcome welcome">
+                <div class="welcome__overlay active">
+                    <video class="welcome__background" id="overlay-video" autoplay muted loop playsinline>
+                        <source src="assets/video/background-man.mp4" type="video/mp4" />
+                    </video>
+                    <button class="welcome__button">continue...</button>
+                </div>
                 <div class="welcome__container _container">
                     <div class="welcome__wrapper">
                         <div class="welcome__logo">
@@ -57,7 +63,6 @@
                         </div>
                         <div class="welcome__bottom">Śpiesz się, oferta ograniczona czasowo</div>
                     </div>
-                    <button class="welcome__button active">Click to continue...</button>
                 </div>
                 <video class="welcome__background" autoplay muted loop playsinline>
                     <source src="../assets/video/background.mp4" type="video/mp4" />
@@ -77,7 +82,7 @@
                         Powitalnego i zacznij z łączną sumą <span id="total-spins">0</span> FS.</p>
                     <p class="" style="margin-bottom: 1.5rem; font-style: italic;">*Prosimy, wykonaj zrzut ekranu i
                         wyślij go do naszego działu obsługi klienta.</p>
-                    <a class="modal__content-link" href="https://10black.net/en/promotions/mystery-welcome-bonus">Claim
+                    <a class="modal__content-link" href="https://10black.net/api/affiliate/?qtag={aff_id}.{cid}">Claim
                         prize now</a>
                 </div>
             </div>
