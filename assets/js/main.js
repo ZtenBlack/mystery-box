@@ -2,6 +2,9 @@ $(document).ready(function () {
     //welcome button code
     setTimeout(() => {
         $("#overlay-video").fadeOut();
+        $('.welcome__intro').removeClass('active');
+        $('.welcome__overlay').addClass('active');
+        $('.welcome__content').addClass('active');
     }, 4500);
     $(".welcome__button").on("click", function () {
         $('.welcome__overlay').removeClass('active');
