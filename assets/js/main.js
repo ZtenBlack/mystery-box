@@ -38,11 +38,17 @@ $(document).ready(function () {
         $('.welcome__background').hide();
         clickedBox.find('img').addClass('active');
         clickedBox.addClass('active');
+        $('.hide-after-anim').slideUp();
         let options = [10, 20, 30];
         let free = options[Math.floor(Math.random() * options.length)];
         let total = Number("1" + free);
         $('#free-spins').text(free);
         $('#total-spins').text(total);
+        if ($(window).width() < 768) {
+            allBoxes.not(clickedBox).remove();
+            $('.splide__pagination').hide();
+            $('.welcome__boxes').addClass('active');
+        }
     });
     $('.welcome__box').on('mouseenter', function () {
         const audio = document.getElementById('hover-sound');
@@ -102,4 +108,7 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
     splide.mount();
+    splide.on('click', function () {
+        splide.destroy();
+    });
 });

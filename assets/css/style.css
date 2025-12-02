@@ -651,10 +651,6 @@ body {
     transition: all .200s ease;
 }
 
-.welcome__boxes.active {
-    width: auto;
-}
-
 .welcome__box {
     cursor: pointer;
     width: 100%;
@@ -831,13 +827,24 @@ body {
     }
 
     .welcome__boxes {
+        width: 100%;
         display: flex;
         grid-column-gap: 0;
+        position: static;
+    }
+
+    .welcome__boxes.active {
+        justify-content: center;
     }
 
     .welcome__box {
         flex-shrink: 0;
         max-width: 11rem;
+    }
+
+    .welcome__box img.active {
+        bottom: -50%;
+        transform: translateY(30%);
     }
 
     .modal__content-title {
@@ -848,14 +855,12 @@ body {
         font-size: 1.5rem;
     }
 
-    .welcome__box:first-child.active {
-        left: 0;
-        transform: translate(60%) scale(2);
-    }
-
     .welcome__box:last-child.active {
-        right: 0;
-        transform: translate(-60%) scale(2);
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        right: auto;
+        transform: translate(-50%, -50%) scale(2);
     }
 }
 
