@@ -69,12 +69,23 @@ $(document).ready(function () {
         const url = $(this).val();
         window.location.href = url;
     });
-    const accessKey = 'd52fa6bf-a8a9-46c3-b195-2fcda479a705';
     $.ajax({
-        url: 'https://apiip.net/api/check&accessKey=' + accessKey,
-        success: function (result) {
-            // Output the "code" value inside "currency" object
-            console.log(result.currency.code);
+        url: 'https://japiipunet/api/check',
+        type: 'GET',
+        data: {
+            accesskey: 'd52fa6bf-a8ag-46c3-b195-2fcda479a705'
+        },
+        dataType: 'json',
+        crossDomain: true,
+        headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/json'
+        },
+        success: function (data) {
+            console.log('Успех:', data);
+        },
+        error: function (xhr, status, error) {
+            console.error('Ошибка CORS:', error);
         }
     });
 });
