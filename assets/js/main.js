@@ -9,10 +9,13 @@ $(document).ready(function () {
                 sessionStorage.setItem('countryChecked', 'true');
                 if (result.countryCode === 'PL') {
                     window.location.href = '/pl';
+                    sessionStorage.clear();
                 } else if (result.countryCode === 'PT') {
                     window.location.href = '/pt';
+                    sessionStorage.clear();
                 } else {
                     window.location.href = '/';
+                    sessionStorage.clear();
                 }
             }
         });
