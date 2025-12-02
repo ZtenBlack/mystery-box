@@ -11,6 +11,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="preload" as="image" href="../assets/images/firebox.webp">
 </head>
 
 <body>
@@ -99,7 +100,7 @@
         $(document).ready(function () {
             $(".welcome__box").on("click", function () {
                 let img = $(this).find('img');
-                img.attr('src', '../assets/images/firebox.gif');
+                img.attr('src', '../assets/images/firebox.webp');
                 setTimeout(() => {
                     img.hide();
                 }, 7000);
