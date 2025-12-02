@@ -472,7 +472,6 @@ body {
 
 .welcome__container {
     text-align: center;
-    overflow-y: auto;
     padding: 2rem 1.25rem;
 }
 
@@ -561,6 +560,14 @@ body {
     margin-bottom: 0.625rem;
 }
 
+.welcome__logo,
+.welcome__title,
+.welcome__subtitle,
+.welcome__counter {
+    position: relative;
+    z-index: 10;
+}
+
 .welcome__background {
     width: 100%;
     height: 100%;
@@ -645,7 +652,15 @@ body {
 .welcome__box {
     cursor: pointer;
     max-width: 13.5rem;
+    position: relative;
     transition: all .200s ease;
+}
+
+.welcome__box img.active {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    left: 0;
 }
 
 .welcome__box:hover {

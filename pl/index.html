@@ -29,7 +29,8 @@
         <main class="page">
             <section class="page__welcome welcome">
                 <div class="welcome__intro active">
-                    <video class="welcome__background" id="overlay-video" autoplay muted loop playsinline>
+                    <video class="welcome__background" id="overlay-video" autoplay muted loop playsinline
+                        preload="auto">
                         <source src="../assets/video/background-man.mp4" type="video/mp4" />
                     </video>
                 </div>
@@ -68,11 +69,17 @@
                         </div>
                     </div>
                 </div>
-                <video class="welcome__background" autoplay muted loop playsinline>
+                <video class="welcome__background" autoplay muted loop playsinline preload="auto">
                     <source src="../assets/video/background.mp4" type="video/mp4" />
                 </video>
-                <audio class="welcome__music" loop>
+                <audio class="welcome__music" loop preload="auto">
                     <source src="../assets/sound/music.mp3" type="audio/mpeg">
+                </audio>
+                <audio class="welcome__music" id="hover-sound" preload="auto">
+                    <source src="../assets/sound/laugh.mp3" type="audio/mpeg">
+                </audio>
+                <audio class="welcome__music" id="modal-sound" preload="auto">
+                    <source src="../assets/sound/congratulations.mp3" type="audio/mpeg">
                 </audio>
             </section>
         </main>
@@ -97,6 +104,13 @@
     <script src="../assets/js/splide.min.js"></script>
     <script src="../assets/js/main.js"></script>
     <script src="../assets/js/modal-animation.js"></script>
+    <script>
+        $(document).ready(function () {
+            $(".welcome__box").on("click", function () {
+                $(this).find('img').attr('src', '../assets/images/firebox.gif');
+            });
+        });
+    </script>
 </body>
 
 </html>

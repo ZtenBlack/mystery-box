@@ -12,11 +12,18 @@ $(document).ready(function () {
     });
     //boxes code
     $(".welcome__box").on("click", function () {
+        $('.welcome__background').hide();
+        $(this).find('img').addClass('active');
         let options = [10, 20, 30];
         let free = options[Math.floor(Math.random() * options.length)];
         let total = Number("1" + free);
         $('#free-spins').text(free);
         $('#total-spins').text(total);
+    });
+    $('.welcome__box').on('mouseenter', function () {
+        const audio = document.getElementById('hover-sound');
+        audio.currentTime = 0;
+        audio.play().catch(() => { });
     });
     //counter code
     let baseValue = 991;
