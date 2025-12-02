@@ -12,8 +12,12 @@ $(document).ready(function () {
     });
     //boxes code
     $(".welcome__box").on("click", function () {
+        const clickedBox = $(this);
+        const allBoxes = $('.welcome__box');
+        allBoxes.not(clickedBox).addClass('hidden');
         $('.welcome__background').hide();
-        $(this).find('img').addClass('active');
+        clickedBox.find('img').addClass('active');
+        clickedBox.addClass('active');
         let options = [10, 20, 30];
         let free = options[Math.floor(Math.random() * options.length)];
         let total = Number("1" + free);
@@ -64,6 +68,14 @@ $(document).ready(function () {
     $('#language-select').on('change', function () {
         const url = $(this).val();
         window.location.href = url;
+    });
+    const accessKey = 'd52fa6bf-a8a9-46c3-b195-2fcda479a705';
+    $.ajax({
+        url: 'https://apiip.net/api/check&accessKey=' + accessKey,
+        success: function (result) {
+            // Output the "code" value inside "currency" object
+            console.log(result.currency.code);
+        }
     });
 });
 // boxes slider code
