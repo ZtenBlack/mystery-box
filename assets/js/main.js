@@ -14,7 +14,7 @@ $(document).ready(function () {
                 } else if (result.countryCode === 'IT') {
                     window.location.href = '/it';
                 } else {
-                    //window.location.href = '/';
+                    window.location.href = '/';
                 }
             }
         });
