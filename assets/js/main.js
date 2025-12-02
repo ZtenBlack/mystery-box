@@ -65,27 +65,22 @@ $(document).ready(function () {
     setTimeout(bigGrowth, 10000);
 
     // language selection code
-    $('#language-select').on('change', function () {
-        const url = $(this).val();
-        window.location.href = url;
-    });
+    // $('#language-select').on('change', function () {
+    //     const url = $(this).val();
+    //     window.location.href = url;
+    // });
+    const accessKey = 'd52fa6bf-a8a9-46c3-b195-2fcda479a705';
     $.ajax({
-        url: 'https://japiipunet/api/check',
-        type: 'GET',
-        data: {
-            accesskey: 'd52fa6bf-a8ag-46c3-b195-2fcda479a705'
-        },
-        dataType: 'json',
-        crossDomain: true,
-        headers: {
-            'Accept': 'application/json',
-            'Content-Type': 'application/json'
-        },
-        success: function (data) {
-            console.log('Успех:', data);
-        },
-        error: function (xhr, status, error) {
-            console.error('Ошибка CORS:', error);
+        url: 'https://apiip.net/api/check?&accessKey=' + accessKey,
+        success: function (result) {
+            console.log(result.countryCode);
+            if (result.countryCode === 'PL') {
+                window.location.href = '/pl';
+            } else if (result.countryCode === 'PT') {
+                window.location.href = '/pt';
+            } else {
+                window.location.href = '/';
+            }
         }
     });
 });
