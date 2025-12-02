@@ -1,19 +1,22 @@
 $(document).ready(function () {
     // language selection code
     const accessKey = 'd52fa6bf-a8a9-46c3-b195-2fcda479a705';
-    $.ajax({
-        url: 'https://apiip.net/api/check?&accessKey=' + accessKey,
-        success: function (result) {
-            console.log(result.countryCode);
-            if (result.countryCode === 'PL') {
-                window.location.href = '/pl';
-            } else if (result.countryCode === 'PT') {
-                window.location.href = '/pt';
-            } else {
-                window.location.href = '/';
+    if (!sessionStorage.getItem('countryChecked')) {
+        $.ajax({
+            url: 'https://apiip.net/api/check?&accessKey=' + accessKey,
+            success: function (result) {
+                console.log(result.countryCode);
+                sessionStorage.setItem('countryChecked', 'true');
+                if (result.countryCode === 'PL') {
+                    window.location.href = '/pl';
+                } else if (result.countryCode === 'PT') {
+                    window.location.href = '/pt';
+                } else {
+                    window.location.href = '/';
+                }
             }
-        }
-    });
+        });
+    }
     //welcome button code
     setTimeout(() => {
         $("#overlay-video").fadeOut();
