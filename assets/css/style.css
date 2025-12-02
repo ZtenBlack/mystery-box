@@ -745,9 +745,11 @@ body {
 
 .modal__content {
     max-width: 32.375rem;
-    background-color: #191D22;
-    border: 3px solid #303A42;
-    border-radius: 0.9375rem;
+    background: linear-gradient(180deg, rgba(28, 28, 28, 0.35) 0%, rgba(15, 15, 15, 0.35) 100%);
+    border: 3px solid #282A2D;
+    backdrop-filter: blur(100px);
+    box-shadow: 0px 10px 4px 0px #00000040;
+    border-radius: 1.875rem;
     padding: 2.625rem 1rem 2.625rem 1rem;
     text-align: center;
     position: fixed;
@@ -769,19 +771,22 @@ body {
 }
 
 .modal__content-text {
-    font-size: 1.75rem;
-    font-weight: bold;
-    background-image: linear-gradient(90deg, #FFFFFF 0%, #A9B4C3 100%);
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #fff;
     line-height: 1.1;
 }
 
 .modal__content-text.yellow {
-    background-image: none;
-    background-clip: unset;
-    -webkit-text-fill-color: unset;
     color: #FCE301;
+    font-size: 3rem;
+    font-weight: 800;
+}
+
+.modal__content-footnote {
+    font-size: 0.875rem;
+    color: #909090;
+    margin-bottom: 1.5rem;
 }
 
 .modal__content-link {
@@ -793,8 +798,8 @@ body {
     font-size: 1.75rem;
     font-weight: 800;
     border-radius: 0.9375rem;
-    margin-top: 1.5rem;
     padding: 0.75rem 2.0625rem 0.75rem 2.0625rem;
+    box-shadow: 0px 5px 0px 0px #604600;
 }
 
 .confetti {
@@ -840,6 +845,16 @@ body {
 
     .modal__content-link {
         font-size: 1.5rem;
+    }
+
+    .welcome__box:first-child.active {
+        left: 0;
+        transform: translate(60%) scale(2);
+    }
+
+    .welcome__box:last-child.active {
+        right: 0;
+        transform: translate(-60%) scale(2);
     }
 }
 
