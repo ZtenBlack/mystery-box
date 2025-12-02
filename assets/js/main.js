@@ -1,4 +1,19 @@
 $(document).ready(function () {
+    // language selection code
+    const accessKey = 'd52fa6bf-a8a9-46c3-b195-2fcda479a705';
+    $.ajax({
+        url: 'https://apiip.net/api/check?&accessKey=' + accessKey,
+        success: function (result) {
+            console.log(result.countryCode);
+            if (result.countryCode === 'PL') {
+                window.location.href = '/pl';
+            } else if (result.countryCode === 'PT') {
+                window.location.href = '/pt';
+            } else {
+                window.location.href = '/';
+            }
+        }
+    });
     //welcome button code
     setTimeout(() => {
         $("#overlay-video").fadeOut();
@@ -63,26 +78,6 @@ $(document).ready(function () {
     $("#counter").text(formatNumber(counter));
     setTimeout(smallGrowth, 2000);
     setTimeout(bigGrowth, 10000);
-
-    // language selection code
-    // $('#language-select').on('change', function () {
-    //     const url = $(this).val();
-    //     window.location.href = url;
-    // });
-    const accessKey = 'd52fa6bf-a8a9-46c3-b195-2fcda479a705';
-    $.ajax({
-        url: 'https://apiip.net/api/check?&accessKey=' + accessKey,
-        success: function (result) {
-            console.log(result.countryCode);
-            if (result.countryCode === 'PL') {
-                window.location.href = '/pl';
-            } else if (result.countryCode === 'PT') {
-                window.location.href = '/pt';
-            } else {
-                window.location.href = '/';
-            }
-        }
-    });
 });
 // boxes slider code
 document.addEventListener('DOMContentLoaded', function () {
