@@ -107,7 +107,11 @@
     <script>
         $(document).ready(function () {
             $(".welcome__box").on("click", function () {
-                $(this).find('img').attr('src', '../assets/images/firebox.gif');
+                let img = $(this).find('img');
+                img.attr('src', '../assets/images/firebox.gif');
+                setTimeout(() => {
+                    img.attr('src', '');
+                }, 5000);
             });
         });
     </script>
