@@ -843,5 +843,6 @@ body {
 
     .welcome__box {
         max-width: 9rem;
+        width: 100%;
     }
 }
