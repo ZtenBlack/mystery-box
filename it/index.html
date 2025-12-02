@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <title>Mystery Box</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <main class="page">
+            <section class="page__welcome welcome">
+                <div class="welcome__intro active">
+                    <video class="welcome__background" id="overlay-video" autoplay muted loop playsinline
+                        preload="auto">
+                        <source src="../assets/video/background-man.mp4" type="video/mp4" />
+                    </video>
+                </div>
+                <div class="welcome__overlay">
+                    <button class="welcome__button">FA LA TUA SCELTA</button>
+                </div>
+                <div class="welcome__content">
+                    <div class="welcome__container _container">
+                        <div class="welcome__wrapper">
+                            <div class="welcome__logo">
+                                <img src="../assets/images/svg/Logo.svg" alt="10black Logo">
+                            </div>
+                            <h1 class="welcome__title">FA LA TUA SCELTA</h1>
+                            <p class="welcome__subtitle">Tre scatole. Tre opportunità.</p>
+                            <p class="welcome__subtitle">Uno definisce il tuo cammino.</p>
+                            <div class="welcome__counter">
+                                <div>Scelte effettuate:</div>
+                                <div id="counter">991</div>
+                            </div>
+                            <div class="splide">
+                                <div class="splide__track">
+                                    <div class="welcome__boxes splide__list">
+                                        <div class="welcome__box splide__slide">
+                                            <img src="../assets/images/box.webp" alt="Mystery box">
+                                        </div>
+                                        <div class="welcome__box splide__slide">
+                                            <img src="../assets/images/box.webp" alt="Mystery box">
+                                        </div>
+                                        <div class="welcome__box splide__slide">
+                                            <img src="../assets/images/box.webp" alt="Mystery box">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="welcome__bottom">FAI PRESTO, OFFERTA A TEMPO LIMITATO!</div>
+                        </div>
+                    </div>
+                </div>
+                <video class="welcome__background" autoplay muted loop playsinline preload="auto">
+                    <source src="../assets/video/background.mp4" type="video/mp4" />
+                </video>
+                <audio class="welcome__music" loop preload="auto">
+                    <source src="../assets/sound/music.mp3" type="audio/mpeg">
+                </audio>
+                <audio class="welcome__music" id="hover-sound" preload="auto">
+                    <source src="../assets/sound/laugh.mp3" type="audio/mpeg">
+                </audio>
+                <audio class="welcome__music" id="modal-sound" preload="auto">
+                    <source src="../assets/sound/congratulations.mp3" type="audio/mpeg">
+                </audio>
+            </section>
+        </main>
+        <div class="modal">
+            <div class="modal__wrapper">
+                <div class="modal__content">
+                    <p class="modal__content-text yellow" style="margin-bottom: 1.5rem;">PREMIO OTTENUTO: <span
+                            id="free-spins">0</span> SPIN GRATUITI</p>
+                    <p class="modal__content-text">Aggiornamento disponibile!</p>
+                    <p class="modal__content-text" style="margin-bottom: 1.5rem;">Combinali con il tuo Bonus Benvenuto
+                        del 400% e ottieni un totale di <span id="total-spins">0</span> FS con cui iniziare.</p>
+                    <p class="" style="margin-bottom: 1.5rem; font-style: italic;">*Per favore, fai uno screenshot e invialo al nostro servizio clienti.</p>
+                    <a class="modal__content-link" href="https://10black.net/api/affiliate/?qtag={aff_id}.{cid}">Claim
+                        prize now</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../assets/js/jquery.js"></script>
+    <script src="../assets/js/jquery-ui.min.js"></script>
+    <script src="../assets/js/splide.min.js"></script>
+    <script src="../assets/js/main.js"></script>
+    <script src="../assets/js/modal-animation.js"></script>
+    <script>
+        $(document).ready(function () {
+            $(".welcome__box").on("click", function () {
+                let img = $(this).find('img');
+                img.attr('src', '../assets/images/firebox.gif');
+                setTimeout(() => {
+                    img.hide();
+                }, 7000);
+            });
+        });
+    </script>
+</body>
+
+</html>

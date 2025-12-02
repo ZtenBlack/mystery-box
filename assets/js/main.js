@@ -11,6 +11,8 @@ $(document).ready(function () {
                     window.location.href = '/pl';
                 } else if (result.countryCode === 'PT') {
                     window.location.href = '/pt';
+                } else if (result.countryCode === 'IT') {
+                    window.location.href = '/it';
                 } else {
                     window.location.href = '/';
                 }
