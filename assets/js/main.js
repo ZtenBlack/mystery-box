@@ -14,7 +14,7 @@ $(document).ready(function () {
                 } else if (result.countryCode === 'IT') {
                     window.location.href = '/it';
                 } else {
-                    //window.location.href = '/';
+                    window.location.href = '/';
                 }
             }
         });
@@ -28,7 +28,7 @@ $(document).ready(function () {
     }, 4500);
     $(".welcome__button").on("click", function () {
         $('.welcome__overlay').removeClass('active');
-        $('.welcome__music')[0].play();
+        $('#background-sound')[0].play();
     });
     //boxes code
     $(".welcome__box").on("click", function () {
