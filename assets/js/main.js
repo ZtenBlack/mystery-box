@@ -14,7 +14,7 @@ $(document).ready(function () {
                 } else if (result.countryCode === 'IT') {
                     window.location.href = '/it';
                 } else {
-                    window.location.href = '/';
+                    //window.location.href = '/';
                 }
             }
         });
@@ -39,6 +39,7 @@ $(document).ready(function () {
         clickedBox.find('img').addClass('active');
         clickedBox.addClass('active');
         $('.hide-after-anim').slideUp();
+        playBurningSound();
         let options = [10, 20, 30];
         let free = options[Math.floor(Math.random() * options.length)];
         let total = Number("1" + free);
@@ -50,6 +51,11 @@ $(document).ready(function () {
             $('.welcome__boxes').addClass('active');
         }
     });
+    function playBurningSound() {
+        const audio = document.getElementById('burning-sound');
+        audio.currentTime = 0;
+        audio.play().catch(() => { });
+    }
     $('.welcome__box').on('mouseenter', function () {
         const audio = document.getElementById('hover-sound');
         audio.currentTime = 0;

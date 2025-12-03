@@ -28,11 +28,11 @@ $('.welcome__box').on('click', function (i) {
         });
     }, 8000);
     setTimeout(() => {
-        playSound();
+        playModalSound();
     }, 9000);
 });
 
-function playSound() {
+function playModalSound() {
     const audio = document.getElementById('modal-sound');
     audio.currentTime = 0;
     audio.play().catch(() => { });
