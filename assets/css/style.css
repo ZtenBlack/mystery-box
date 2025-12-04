@@ -672,6 +672,10 @@ video::-webkit-media-controls {
     display: none;
 }
 
+.welcome__box.active #firebox-img {
+    display: inline-block;
+}
+
 .welcome__box:hover {
     transform: translateY(-5px);
 }
