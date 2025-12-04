@@ -110,8 +110,9 @@ $(document).ready(function () {
 // boxes slider code
 document.addEventListener('DOMContentLoaded', function () {
     const splide = new Splide('.splide', {
-        type: 'loop',
+        type: 'slide',
         drag: 'free',
+        flickPower: 200,
         arrows: false,
         pagination: true,
         autoWidth: true,
