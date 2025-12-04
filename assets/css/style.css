@@ -859,6 +859,10 @@ video::-webkit-media-controls {
         max-width: 11rem;
     }
 
+    .welcome__box:hover {
+        transform: none;
+    }
+
     .welcome__box img.active {
         bottom: -50%;
         transform: translateY(30%);
