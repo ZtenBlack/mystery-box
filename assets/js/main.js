@@ -39,8 +39,8 @@ $(document).ready(function () {
         const clickedBox = $(this);
         const boxImage = clickedBox.find('#box-img');
         const fireBoxImage = clickedBox.find('#firebox-img');
-        clickedBox.addClass('active');
         boxImage.hide();
+        clickedBox.addClass('active');
         fireBoxImage.show();
         fireBoxImage.addClass('active');
         setTimeout(() => {
