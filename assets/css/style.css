@@ -664,6 +664,10 @@ video::-webkit-media-controls {
     transition: all 0.6s ease;
 }
 
+.welcome__box.active #box-img {
+    display: none;
+}
+
 #firebox-img {
     display: none;
 }
