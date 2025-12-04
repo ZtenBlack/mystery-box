@@ -115,7 +115,6 @@ document.addEventListener('DOMContentLoaded', function () {
         arrows: false,
         pagination: true,
         autoWidth: true,
-        focus: 'center',
         gap: '1.5rem',
         mediaQuery: 'min',
         breakpoints: {
