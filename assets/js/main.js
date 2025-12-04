@@ -37,11 +37,18 @@ $(document).ready(function () {
     //boxes code
     $(".welcome__box").on("click", function () {
         const clickedBox = $(this);
+        const boxImage = clickedBox.find('#box-img');
+        const fireBoxImage = clickedBox.find('#firebox-img');
+        clickedBox.addClass('active');
+        boxImage.hide();
+        fireBoxImage.show();
+        fireBoxImage.addClass('active');
+        setTimeout(() => {
+            fireBoxImage.hide();
+        }, 7000);
         const allBoxes = $('.welcome__box');
         allBoxes.not(clickedBox).addClass('hidden');
         $('.welcome__background').hide();
-        clickedBox.find('img').addClass('active');
-        clickedBox.addClass('active');
         $('.hide-after-anim').slideUp();
         playBurningSound();
         let options = [10, 20, 30];

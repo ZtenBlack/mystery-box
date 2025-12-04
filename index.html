@@ -45,13 +45,16 @@
                                 <div class="splide__track">
                                     <div class="welcome__boxes splide__list">
                                         <div class="welcome__box splide__slide">
-                                            <img src="assets/images/box.webp" alt="Mystery box">
+                                            <img src="assets/images/box.webp" alt="Mystery box" id="box-img">
+                                            <img src="assets/images/firebox.webp" loading="eager" alt="Mystery box" id="firebox-img">
                                         </div>
                                         <div class="welcome__box splide__slide">
-                                            <img src="assets/images/box.webp" alt="Mystery box">
+                                            <img src="assets/images/box.webp" alt="Mystery box" id="box-img">
+                                            <img src="assets/images/firebox.webp" loading="eager" alt="Mystery box" id="firebox-img">
                                         </div>
                                         <div class="welcome__box splide__slide">
-                                            <img src="assets/images/box.webp" alt="Mystery box">
+                                            <img src="assets/images/box.webp" alt="Mystery box" id="box-img">
+                                            <img src="assets/images/firebox.webp" loading="eager" alt="Mystery box" id="firebox-img">
                                         </div>
                                     </div>
                                 </div>
@@ -100,17 +103,6 @@
     <script src="assets/js/splide.min.js"></script>
     <script src="assets/js/main.js"></script>
     <script src="assets/js/modal-animation.js"></script>
-    <script>
-        $(document).ready(function () {
-            $(".welcome__box").on("click", function () {
-                let img = $(this).find('img');
-                img.attr('src', 'assets/images/firebox.webp');
-                setTimeout(() => {
-                    img.hide();
-                }, 7000);
-            });
-        });
-    </script>
 </body>
 
 </html>

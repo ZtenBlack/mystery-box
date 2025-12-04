@@ -664,6 +664,10 @@ video::-webkit-media-controls {
     transition: all 0.6s ease;
 }
 
+#firebox-img {
+    display: none;
+}
+
 .welcome__box:hover {
     transform: translateY(-5px);
 }
