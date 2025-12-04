@@ -112,11 +112,12 @@ document.addEventListener('DOMContentLoaded', function () {
     const splide = new Splide('.splide', {
         type: 'slide',
         drag: 'free',
-        flickPower: 200,
+        dragMinThreshold: 5,
         arrows: false,
         pagination: true,
         autoWidth: true,
         gap: '1.5rem',
+        padding: '1rem',
         mediaQuery: 'min',
         breakpoints: {
             768: {
