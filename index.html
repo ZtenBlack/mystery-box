@@ -10,6 +10,20 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
         rel="stylesheet">
+    <script>
+        (function () {
+            const params = new URLSearchParams(window.location.search);
+            const qtag = params.get('qtag');
+            if (qtag) {
+                const newUrl = `https://10black.net?qtag=${qtag}`;
+                const btn = document.querySelector('.modal__content-link');
+                if (btn) {
+                    btn.href = newUrl;
+                }
+                console.log("URL:", newUrl);
+            }
+        })();
+    </script>
     <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="preload" as="image" href="assets/images/firebox.webp">
