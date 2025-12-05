@@ -687,6 +687,7 @@ video::-webkit-media-controls {
     grid-template-columns: 1fr 1fr 1fr;
     grid-column-gap: 1.5rem;
     padding-top: 0.625rem;
+    padding-left: 1rem;
     margin-bottom: 1.625rem !important;
     position: relative;
     transition: all .200s ease;
