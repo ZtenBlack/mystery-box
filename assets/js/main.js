@@ -19,6 +19,13 @@ $(document).ready(function () {
             }
         });
     }
+    //getting the gtag value
+    const params = new URLSearchParams(window.location.search);
+    const qtag = params.get('qtag');
+    if (qtag) {
+        const newUrl = `https://10black.net?qtag=${qtag}`;
+        $('.modal__content-link').attr('href', newUrl);
+    }
     //welcome button code
     $(window).on('load', function () {
         const video = document.getElementById('overlay-video');

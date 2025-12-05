@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <title>Mystery Box</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="preload" as="image" href="../assets/images/firebox.webp">
+    <link rel="preload" href="../assets/video/background-man.mp4" as="fetch" type="video/mp4" crossorigin="anonymous">
+    <!-- Hotjar script -->
+    <script src="https://t.contentsquare.net/uxa/fea3269fed1b5.js"></script>
+</head>
+
+<body>
+    <div class="wrapper">
+        <main class="page">
+            <section class="page__welcome welcome">
+                <div class="welcome__intro active">
+                    <video class="welcome__background" id="overlay-video" muted loop playsinline webkit-playsinline
+                        preload="auto">
+                        <source src="../assets/video/background-man.mp4" type="video/mp4" />
+                    </video>
+                </div>
+                <div class="welcome__overlay">
+                    <button class="welcome__button">TRÄFFE DEINE WAHL</button>
+                </div>
+                <div class="welcome__content">
+                    <div class="welcome__container _container">
+                        <div class="welcome__wrapper">
+                            <div class="welcome__logo hide-after-anim">
+                                <img src="../assets/images/svg/Logo.svg" alt="10black Logo">
+                            </div>
+                            <h1 class="welcome__title hide-after-anim">TRÄFFE DEINE WAHL</h1>
+                            <p class="welcome__subtitle hide-after-anim">Drei Boxen. Drei Möglichkeiten.</p>
+                            <p class="welcome__subtitle hide-after-anim">Eine bestimmt deinen Weg.</p>
+                            <div class="welcome__counter hide-after-anim">
+                                <div>Getroffene Entscheidungen:</div>
+                                <div id="counter">991</div>
+                            </div>
+                            <div class="swiper">
+                                <div class="welcome__boxes swiper-wrapper">
+                                    <div class="welcome__box swiper-slide">
+                                        <img src="../assets/images/box.webp" alt="Mystery box" id="box-img">
+                                        <img src="../assets/images/firebox.webp" loading="eager" alt="Mystery box"
+                                            id="firebox-img">
+                                    </div>
+                                    <div class="welcome__box swiper-slide">
+                                        <img src="../assets/images/box.webp" alt="Mystery box" id="box-img">
+                                        <img src="../assets/images/firebox.webp" loading="eager" alt="Mystery box"
+                                            id="firebox-img">
+                                    </div>
+                                    <div class="welcome__box swiper-slide">
+                                        <img src="../assets/images/box.webp" alt="Mystery box" id="box-img">
+                                        <img src="../assets/images/firebox.webp" loading="eager" alt="Mystery box"
+                                            id="firebox-img">
+                                    </div>
+                                </div>
+                                <div class="swiper-pagination"></div>
+                            </div>
+                            <div class="welcome__bottom hide-after-anim">Beeil dich, zeitlich begrenztes Angebot</div>
+                        </div>
+                    </div>
+                </div>
+                <video class="welcome__background" autoplay muted loop playsinline webkit-playsinline preload="auto">
+                    <source src="../assets/video/background.mp4" type="video/mp4" />
+                </video>
+                <audio class="welcome__music" id="background-sound" loop preload="auto">
+                    <source src="../assets/sound/music.mp3" type="audio/mpeg">
+                </audio>
+                <audio class="welcome__music" id="hover-sound" preload="auto">
+                    <source src="../assets/sound/laugh.mp3" type="audio/mpeg">
+                </audio>
+                <audio class="welcome__music" id="modal-sound" preload="auto">
+                    <source src="../assets/sound/congratulations.mp3" type="audio/mpeg">
+                </audio>
+                <audio class="welcome__music" id="burning-sound" preload="auto">
+                    <source src="../assets/sound/burning.mp3" type="audio/mpeg">
+                </audio>
+            </section>
+        </main>
+        <div class="modal">
+            <div class="modal__wrapper">
+                <div class="modal__content">
+                    <img src="../assets/images/svg/Logo.svg" alt="10black Logo" style="margin-bottom: 1.5rem;">
+                    <p class="modal__content-text ">GEWINN EINGELÖST:</p>
+                    <p class="modal__content-text yellow" style="margin-bottom: 1.5rem;"><span id="free-spins">0</span>
+                        FREIDREHUNGEN</p>
+                    <p class="modal__content-text">Upgrade verfügbar!</p>
+                    <p class="modal__content-text" style="margin-bottom: 1.5rem;">Kombiniere diese mit deinem 400%
+                        Willkommensbonus und erhalte insgesamt <span id="total-spins">0</span> FS zum Start.</p>
+                    <div class="modal__content-footnote-wrapper">
+                        <p class="modal__content-footnote">*Bitte machen Sie einen Screenshot und senden Sie ihn an
+                            unseren Kundendienst, um Ihren Preis zu aktivieren.</p>
+                    </div>
+                    <div class="modal__content-number" id="unique-id">0</div>
+                    <a class="modal__content-link" href="https://10black.net/api/affiliate/?qtag={aff_id}.{cid}">GEWINN
+                        EINLÖSEN</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../assets/js/jquery.js"></script>
+    <script src="../assets/js/swiper-bundle.min.js"></script>
+    <script src="../assets/js/main.js"></script>
+    <script src="../assets/js/modal-animation.js"></script>
+</body>
+
+</html>
