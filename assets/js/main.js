@@ -8,7 +8,7 @@ $(document).ready(function () {
         qtag = sessionStorage.getItem('qtag');
     }
     if (qtag) {
-        const newUrl = `https://10black.net?qtag=${qtag}`;
+        const newUrl = `https://10black.net/api/affiliate/?qtag=${qtag}`;
         $('.modal__content-link').attr('href', newUrl);
     }
     // language selection code
