@@ -10,8 +10,12 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
         rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="preload" as="image" href="assets/images/firebox.webp">
+    <link rel="preload" href="assets/video/background-man.mp4" as="fetch" type="video/mp4" crossorigin="anonymous">
     <script>
-        (function () {
+        document.addEventListener("DOMContentLoaded", function () {
             const params = new URLSearchParams(window.location.search);
             const qtag = params.get('qtag');
             if (qtag) {
@@ -22,12 +26,8 @@
                 }
                 console.log("URL:", newUrl);
             }
-        })();
+        });
     </script>
-    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
-    <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="preload" as="image" href="assets/images/firebox.webp">
-    <link rel="preload" href="assets/video/background-man.mp4" as="fetch" type="video/mp4" crossorigin="anonymous">
     <!-- Hotjar script -->
     <script src="https://t.contentsquare.net/uxa/fea3269fed1b5.js"></script>
 </head>
