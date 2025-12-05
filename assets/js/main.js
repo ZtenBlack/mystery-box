@@ -1,4 +1,11 @@
 $(document).ready(function () {
+    //getting the gtag value
+    const params = new URLSearchParams(window.location.search);
+    const qtag = params.get('qtag');
+    if (qtag) {
+        const newUrl = `https://10black.net?qtag=${qtag}`;
+        $('.modal__content-link').attr('href', newUrl);
+    }
     // language selection code
     const accessKey = 'd52fa6bf-a8a9-46c3-b195-2fcda479a705';
     if (!sessionStorage.getItem('countryChecked')) {
@@ -18,13 +25,6 @@ $(document).ready(function () {
                 }
             }
         });
-    }
-    //getting the gtag value
-    const params = new URLSearchParams(window.location.search);
-    const qtag = params.get('qtag');
-    if (qtag) {
-        const newUrl = `https://10black.net?qtag=${qtag}`;
-        $('.modal__content-link').attr('href', newUrl);
     }
     //welcome button code
     $(window).on('load', function () {
