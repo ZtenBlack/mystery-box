@@ -109,24 +109,39 @@ $(document).ready(function () {
 });
 // boxes slider code
 document.addEventListener('DOMContentLoaded', function () {
-    const splide = new Splide('.splide', {
-        type: 'slide',
-        drag: 'free',
-        dragMinThreshold: 5,
-        arrows: false,
-        pagination: true,
-        autoWidth: true,
-        gap: '1.5rem',
-        padding: '1rem',
-        mediaQuery: 'min',
+    // const splide = new Splide('.splide', {
+    //     type: 'slide',
+    //     drag: 'free',
+    //     dragMinThreshold: 5,
+    //     arrows: false,
+    //     pagination: true,
+    //     autoWidth: true,
+    //     gap: '1.5rem',
+    //     padding: '1rem',
+    //     mediaQuery: 'min',
+    //     breakpoints: {
+    //         768: {
+    //             destroy: true,
+    //         },
+    //     }
+    // });
+    // splide.mount();
+    // splide.on('click', function () {
+    //     splide.destroy();
+    // });
+    const swiper = new Swiper('.swiper', {
+        loop: false,
+        freeMode: true,
+        slidesPerView: 'auto',
+        spaceBetween: 24,
         breakpoints: {
             768: {
-                destroy: true,
-            },
-        }
-    });
-    splide.mount();
-    splide.on('click', function () {
-        splide.destroy();
+                enabled: false,
+            }
+        },
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
     });
 });

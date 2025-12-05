@@ -10,6 +10,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
         rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="preload" as="image" href="assets/images/firebox.webp">
     <link rel="preload" href="assets/video/background-man.mp4" as="fetch" type="video/mp4" crossorigin="anonymous">
@@ -41,23 +42,46 @@
                                 <div>Choices made:</div>
                                 <div id="counter">991</div>
                             </div>
-                            <div class="splide">
+                            <!-- <div class="splide">
                                 <div class="splide__track">
                                     <div class="welcome__boxes splide__list">
                                         <div class="welcome__box splide__slide">
                                             <img src="assets/images/box.webp" alt="Mystery box" id="box-img">
-                                            <img src="assets/images/firebox.webp" loading="eager" alt="Mystery box" id="firebox-img">
+                                            <img src="assets/images/firebox.webp" loading="eager" alt="Mystery box"
+                                                id="firebox-img">
                                         </div>
                                         <div class="welcome__box splide__slide">
                                             <img src="assets/images/box.webp" alt="Mystery box" id="box-img">
-                                            <img src="assets/images/firebox.webp" loading="eager" alt="Mystery box" id="firebox-img">
+                                            <img src="assets/images/firebox.webp" loading="eager" alt="Mystery box"
+                                                id="firebox-img">
                                         </div>
                                         <div class="welcome__box splide__slide">
                                             <img src="assets/images/box.webp" alt="Mystery box" id="box-img">
-                                            <img src="assets/images/firebox.webp" loading="eager" alt="Mystery box" id="firebox-img">
+                                            <img src="assets/images/firebox.webp" loading="eager" alt="Mystery box"
+                                                id="firebox-img">
                                         </div>
                                     </div>
                                 </div>
+                            </div> -->
+                            <div class="swiper">
+                                <div class="welcome__boxes swiper-wrapper">
+                                    <div class="welcome__box swiper-slide">
+                                        <img src="assets/images/box.webp" alt="Mystery box" id="box-img">
+                                        <img src="assets/images/firebox.webp" loading="eager" alt="Mystery box"
+                                            id="firebox-img">
+                                    </div>
+                                    <div class="welcome__box swiper-slide">
+                                        <img src="assets/images/box.webp" alt="Mystery box" id="box-img">
+                                        <img src="assets/images/firebox.webp" loading="eager" alt="Mystery box"
+                                            id="firebox-img">
+                                    </div>
+                                    <div class="welcome__box swiper-slide">
+                                        <img src="assets/images/box.webp" alt="Mystery box" id="box-img">
+                                        <img src="assets/images/firebox.webp" loading="eager" alt="Mystery box"
+                                            id="firebox-img">
+                                    </div>
+                                </div>
+                                <div class="swiper-pagination"></div>
                             </div>
                             <div class="welcome__bottom hide-after-anim">HURRY, LIMITED TIME OFFER</div>
                         </div>
@@ -100,7 +124,7 @@
         </div>
     </div>
     <script src="assets/js/jquery.js"></script>
-    <script src="assets/js/splide.min.js"></script>
+    <script src="assets/js/swiper-bundle.min.js"></script>
     <script src="assets/js/main.js"></script>
     <script src="assets/js/modal-animation.js"></script>
 </body>
