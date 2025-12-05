@@ -835,8 +835,15 @@ video::-webkit-media-controls {
 }
 
 .modal__content-footnote {
-    font-size: 0.875rem;
-    color: #909090;
+    font-size: 1rem;
+    color: #fff;
+    margin-bottom: 1rem;
+}
+
+.modal__content-number {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #fff;
     margin-bottom: 1.5rem;
 }
 

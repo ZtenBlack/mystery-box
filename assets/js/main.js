@@ -56,6 +56,7 @@ $(document).ready(function () {
         let total = Number("1" + free);
         $('#free-spins').text(free);
         $('#total-spins').text(total);
+        $('#unique-id').text(generateNumber());
         if ($(window).width() < 768) {
             allBoxes.not(clickedBox).remove();
             $('.splide__pagination').hide();
@@ -72,6 +73,15 @@ $(document).ready(function () {
         audio.currentTime = 0;
         audio.play().catch(() => { });
     });
+    function generateNumber() {
+        const STORAGE_KEY = "uniqueModalNumber";
+        let savedNumber = localStorage.getItem(STORAGE_KEY);
+        if (!savedNumber) {
+            savedNumber = Math.floor(Math.random() * (10000 - 1000 + 1)) + 1000;
+            localStorage.setItem(STORAGE_KEY, savedNumber);
+        }
+        return savedNumber;
+    }
     //counter code
     let baseValue = 991;
     let savedValue = localStorage.getItem("liveUsers");
