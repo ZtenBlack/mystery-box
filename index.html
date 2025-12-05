@@ -14,20 +14,6 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="preload" as="image" href="assets/images/firebox.webp">
     <link rel="preload" href="assets/video/background-man.mp4" as="fetch" type="video/mp4" crossorigin="anonymous">
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            const params = new URLSearchParams(window.location.search);
-            const qtag = params.get('qtag');
-            if (qtag) {
-                const newUrl = `https://10black.net?qtag=${qtag}`;
-                const btn = document.querySelector('.modal__content-link');
-                if (btn) {
-                    btn.href = newUrl;
-                }
-                console.log("URL:", newUrl);
-            }
-        });
-    </script>
     <!-- Hotjar script -->
     <script src="https://t.contentsquare.net/uxa/fea3269fed1b5.js"></script>
 </head>
