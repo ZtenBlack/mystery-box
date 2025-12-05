@@ -834,10 +834,16 @@ video::-webkit-media-controls {
     font-weight: 800;
 }
 
+.modal__content-footnote-wrapper {
+    border: 2px solid #fff;
+    border-radius: 1rem;
+    margin-bottom: 1rem;
+    padding: 1rem 1rem;
+}
+
 .modal__content-footnote {
     font-size: 1rem;
     color: #fff;
-    margin-bottom: 1rem;
 }
 
 .modal__content-number {
