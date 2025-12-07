@@ -10,6 +10,7 @@ $(document).ready(function () {
     if (qtag) {
         const newUrl = `https://10black.net/api/affiliate/?qtag=${qtag}`;
         $('.modal__content-link').attr('href', newUrl);
+        console.log(newUrl);
     }
     // language selection code
     const accessKey = 'd52fa6bf-a8a9-46c3-b195-2fcda479a705';
