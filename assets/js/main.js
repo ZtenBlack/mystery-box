@@ -63,12 +63,12 @@ $(document).ready(function () {
         $('.welcome__background').hide();
         $('.hide-after-anim').slideUp();
         playBurningSound();
-        let options = [10, 20, 30];
-        let free = options[Math.floor(Math.random() * options.length)];
-        let total = Number("1" + free);
+        let options = [20, 40, 60];
+        let extra = options[Math.floor(Math.random() * options.length)];
+        let free = Number("1" + extra);
         $('#free-spins').text(free);
-        $('#total-spins').text(total);
-        $('#unique-id').text(generateNumber());
+        $('#extra-spins').text(extra);
+        // $('#unique-id').text(generateNumber());
         if ($(window).width() < 768) {
             allBoxes.not(clickedBox).remove();
             $('.splide__pagination').hide();
@@ -85,15 +85,15 @@ $(document).ready(function () {
         audio.currentTime = 0;
         audio.play().catch(() => { });
     });
-    function generateNumber() {
-        const STORAGE_KEY = "uniqueModalNumber";
-        let savedNumber = localStorage.getItem(STORAGE_KEY);
-        if (!savedNumber) {
-            savedNumber = Math.floor(Math.random() * (10000 - 1000 + 1)) + 1000;
-            localStorage.setItem(STORAGE_KEY, savedNumber);
-        }
-        return savedNumber;
-    }
+    // function generateNumber() {
+    //     const STORAGE_KEY = "uniqueModalNumber";
+    //     let savedNumber = localStorage.getItem(STORAGE_KEY);
+    //     if (!savedNumber) {
+    //         savedNumber = Math.floor(Math.random() * (10000 - 1000 + 1)) + 1000;
+    //         localStorage.setItem(STORAGE_KEY, savedNumber);
+    //     }
+    //     return savedNumber;
+    // }
     //counter code
     let baseValue = 991;
     let savedValue = localStorage.getItem("liveUsers");

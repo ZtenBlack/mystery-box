@@ -801,7 +801,7 @@ video::-webkit-media-controls {
     backdrop-filter: blur(100px);
     box-shadow: 0px 10px 4px 0px #00000040;
     border-radius: 1.875rem;
-    padding: 2.625rem 1rem 2.625rem 1rem;
+    padding: 2rem 1.5rem 1rem 1.5rem;
     text-align: center;
     position: fixed;
     top: 0;
@@ -813,6 +813,17 @@ video::-webkit-media-controls {
     transition: transform 1.5s cubic-bezier(.25, 1.5, .5, 1), opacity .5s;
 }
 
+.modal__content-block {
+    text-align: left;
+    padding: 1rem 1.3rem 1rem 1.3rem;
+    border: 1px solid #3C3C3C;
+    border-radius: 0.9375rem;
+}
+
+.modal__content-img {
+    max-width: 4.6875rem;
+}
+
 .modal__content-title {
     font-size: 3.75rem;
     font-weight: 800;
@@ -822,16 +833,33 @@ video::-webkit-media-controls {
 }
 
 .modal__content-text {
-    font-size: 1.5rem;
+    font-size: 1.125rem;
     font-weight: 600;
     color: #fff;
     line-height: 1.1;
+    text-transform: uppercase;
+}
+
+.modal__content-text.big {
+    font-size: 2.25rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-bottom: 1.5rem;
 }
 
 .modal__content-text.yellow {
     color: #FCE301;
-    font-size: 3rem;
+    font-size: 2rem;
     font-weight: 800;
+    margin-bottom: 0.5rem;
+}
+
+.modal__content-text.gray {
+    font-size: 1rem;
+    font-weight: 400;
+    color: #909090;
+    text-transform: capitalize;
+    line-height: 1.2;
 }
 
 .modal__content-footnote-wrapper {
@@ -854,16 +882,29 @@ video::-webkit-media-controls {
 }
 
 .modal__content-link {
+    width: 100%;
     display: inline-block;
-    text-transform: uppercase;
     text-decoration: none;
-    color: #000;
     background-color: #FCE301;
-    font-size: 1.75rem;
-    font-weight: 800;
     border-radius: 0.9375rem;
-    padding: 0.75rem 2.0625rem 0.75rem 2.0625rem;
+    padding: 0.75rem 1rem 0.75rem 1rem;
     box-shadow: 0px 5px 0px 0px #604600;
+    margin-bottom: 1.5rem;
+}
+
+.modal__content-link-text {
+    color: #271A01;
+}
+
+.modal__content-link-text.big {
+    font-size: 1.625rem;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+.modal__content-link-text.small {
+    font-size: 1rem;
+    font-weight: 400;
 }
 
 .confetti {
@@ -922,10 +963,6 @@ video::-webkit-media-controls {
         font-size: 2.5rem;
     }
 
-    .modal__content-link {
-        font-size: 1.5rem;
-    }
-
     .welcome__box:last-child.active {
         position: absolute;
         top: 50%;
@@ -959,5 +996,13 @@ video::-webkit-media-controls {
     .welcome__box {
         max-width: 9rem;
         width: 100%;
+    }
+
+    .modal__content-text.big {
+        font-size: 2rem;
+    }
+
+    .modal__content-link-text.big {
+        font-size: 1.3rem;
     }
 }

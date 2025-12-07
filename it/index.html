@@ -88,20 +88,38 @@
         <div class="modal">
             <div class="modal__wrapper">
                 <div class="modal__content">
-                    <img src="../assets/images/svg/Logo.svg" alt="10black Logo" style="margin-bottom: 1.5rem;">
-                    <p class="modal__content-text ">PREMIO OTTENUTO:</p>
-                    <p class="modal__content-text yellow" style="margin-bottom: 1.5rem;"><span id="free-spins">0</span>
-                        SPIN GRATUITI</p>
-                    <p class="modal__content-text">Aggiornamento disponibile!</p>
-                    <p class="modal__content-text" style="margin-bottom: 1.5rem;">Combinali con il tuo Bonus Benvenuto
-                        del 400% e ottieni un totale di <span id="total-spins">0</span> FS con cui iniziare.</p>
-                    <div class="modal__content-footnote-wrapper">
-                        <p class="modal__content-footnote">*Per favore, fai uno screenshot e invialo al nostro servizio
-                            clienti per attivare il tuo premio.</p>
+                    <img src="../assets/images/svg/Logo.svg" alt="10black Logo">
+                    <p class="modal__content-text big">HAI VINTO!</p>
+                    <div class="modal__content-block" style="margin-bottom: 1rem;">
+                        <div style="display: flex; align-items: center; gap: 1rem;">
+                            <div class="modal__content-img">
+                                <img src="../assets/images/gift.webp" alt="">
+                            </div>
+                            <div>
+                                <p class="modal__content-text yellow">400%</p>
+                                <p class="modal__content-text">BONUS DI BENVENUTO</p>
+                            </div>
+                        </div>
                     </div>
-                    <div class="modal__content-number" id="unique-id">0</div>
-                    <a class="modal__content-link" href="https://10black.net/api/affiliate/?qtag={aff_id}.{cid}">RITIRA
-                        IL PREMIO</a>
+                    <div class="modal__content-block" style="margin-bottom: 1.5rem;">
+                        <div style="display: flex; align-items: center; gap: 1rem;">
+                            <div class="modal__content-img">
+                                <img src="../assets/images/freespins.webp" alt="">
+                            </div>
+                            <div>
+                                <p class="modal__content-text yellow" id="free-spins">0</p>
+                                <p class="modal__content-text">GIRI GRATUITI</p>
+
+                            </div>
+                        </div>
+                        <p class="modal__content-text gray">100 Giri Gratuiti di Benvenuto + <span id="extra-spins">0</span>
+                            Extra</p>
+                    </div>
+                    <a class="modal__content-link" href="https://10black.net/api/affiliate/?qtag={aff_id}.{cid}">
+                        <div class="modal__content-link-text big">RISCATTA IL PREMIO ORA</div>
+                        <div class="modal__content-link-text small">È richiesto un deposito minimo di €20</div>
+                    </a>
+                    <p class="modal__content-footnote" style="margin-bottom: 0.5rem;">Invia uno screenshot all'assistenza per sbloccare il premio.</p>
                 </div>
             </div>
         </div>
