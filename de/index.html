@@ -88,20 +88,38 @@
         <div class="modal">
             <div class="modal__wrapper">
                 <div class="modal__content">
-                    <img src="../assets/images/svg/Logo.svg" alt="10black Logo" style="margin-bottom: 1.5rem;">
-                    <p class="modal__content-text ">GEWINN EINGELÖST:</p>
-                    <p class="modal__content-text yellow" style="margin-bottom: 1.5rem;"><span id="free-spins">0</span>
-                        FREIDREHUNGEN</p>
-                    <p class="modal__content-text">Upgrade verfügbar!</p>
-                    <p class="modal__content-text" style="margin-bottom: 1.5rem;">Kombiniere diese mit deinem 400%
-                        Willkommensbonus und erhalte insgesamt <span id="total-spins">0</span> FS zum Start.</p>
-                    <div class="modal__content-footnote-wrapper">
-                        <p class="modal__content-footnote">*Bitte machen Sie einen Screenshot und senden Sie ihn an
-                            unseren Kundendienst, um Ihren Preis zu aktivieren.</p>
+                    <img src="../assets/images/svg/Logo.svg" alt="10black Logo">
+                    <p class="modal__content-text big">DU HAST GEWONNEN!</p>
+                    <div class="modal__content-block" style="margin-bottom: 1rem;">
+                        <div style="display: flex; align-items: center; gap: 1rem;">
+                            <div class="modal__content-img">
+                                <img src="../assets/images/gift.webp" alt="">
+                            </div>
+                            <div>
+                                <p class="modal__content-text yellow">400%</p>
+                                <p class="modal__content-text">WILLKOMMENSBONUS</p>
+                            </div>
+                        </div>
                     </div>
-                    <div class="modal__content-number" id="unique-id">0</div>
-                    <a class="modal__content-link" href="https://10black.net/api/affiliate/?qtag={aff_id}.{cid}">GEWINN
-                        EINLÖSEN</a>
+                    <div class="modal__content-block" style="margin-bottom: 1.5rem;">
+                        <div style="display: flex; align-items: center; gap: 1rem;">
+                            <div class="modal__content-img">
+                                <img src="../assets/images/freespins.webp" alt="">
+                            </div>
+                            <div>
+                                <p class="modal__content-text yellow" id="free-spins">0</p>
+                                <p class="modal__content-text">FREIDREHUNGEN</p>
+
+                            </div>
+                        </div>
+                        <p class="modal__content-text gray">100 Willkommens-Freidrehungen + <span id="extra-spins">0</span>
+                            Extra</p>
+                    </div>
+                    <a class="modal__content-link" href="https://10black.net/api/affiliate/?qtag={aff_id}.{cid}">
+                        <div class="modal__content-link-text big">PREIS JETZT EINLÖSEN</div>
+                        <div class="modal__content-link-text small">Mindestens €20 erste Einzahlung erforderlich</div>
+                    </a>
+                    <p class="modal__content-footnote" style="margin-bottom: 0.5rem;">Senden Sie einen Screenshot an den Support, um Ihren Preis freizuschalten.</p>
                 </div>
             </div>
         </div>
