@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <title>Mystery Box</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="preload" as="image" href="../assets/images/firebox.webp">
+    <link rel="preload" href="../assets/video/background-man.mp4" as="fetch" type="video/mp4" crossorigin="anonymous">
+    <!-- Hotjar script -->
+    <script src="https://t.contentsquare.net/uxa/fea3269fed1b5.js"></script>
+</head>
+
+<body>
+    <div class="wrapper">
+        <main class="page">
+            <section class="page__welcome welcome">
+                <div class="welcome__intro active">
+                    <video class="welcome__background" id="overlay-video" muted loop playsinline webkit-playsinline
+                        preload="auto">
+                        <source src="../assets/video/background-man.mp4" type="video/mp4" />
+                    </video>
+                </div>
+                <div class="welcome__overlay">
+                    <button class="welcome__button">SEÇİMİNİ YAP</button>
+                </div>
+                <div class="welcome__content">
+                    <div class="welcome__container _container">
+                        <div class="welcome__wrapper">
+                            <div class="welcome__logo hide-after-anim">
+                                <img src="../assets/images/svg/Logo.svg" alt="10black Logo">
+                            </div>
+                            <h1 class="welcome__title hide-after-anim">SEÇİMİNİ YAP</h1>
+                            <p class="welcome__subtitle hide-after-anim">Üç kutu. Üç fırsat.</p>
+                            <p class="welcome__subtitle hide-after-anim">Biri senin yolunu belirler.</p>
+                            <div class="welcome__counter hide-after-anim">
+                                <div>Yapılan Seçimler:</div>
+                                <div id="counter">991</div>
+                            </div>
+                            <div class="swiper">
+                                <div class="welcome__boxes swiper-wrapper">
+                                    <div class="welcome__box swiper-slide">
+                                        <img src="../assets/images/box.webp" alt="Mystery box" id="box-img">
+                                        <img src="../assets/images/firebox.webp" loading="eager" alt="Mystery box"
+                                            id="firebox-img">
+                                    </div>
+                                    <div class="welcome__box swiper-slide">
+                                        <img src="../assets/images/box.webp" alt="Mystery box" id="box-img">
+                                        <img src="../assets/images/firebox.webp" loading="eager" alt="Mystery box"
+                                            id="firebox-img">
+                                    </div>
+                                    <div class="welcome__box swiper-slide">
+                                        <img src="../assets/images/box.webp" alt="Mystery box" id="box-img">
+                                        <img src="../assets/images/firebox.webp" loading="eager" alt="Mystery box"
+                                            id="firebox-img">
+                                    </div>
+                                </div>
+                                <div class="swiper-pagination"></div>
+                            </div>
+                            <div class="welcome__bottom hide-after-anim">Acele edin, sınırlı süreli teklif!</div>
+                        </div>
+                    </div>
+                </div>
+                <video class="welcome__background" autoplay muted loop playsinline webkit-playsinline preload="auto">
+                    <source src="../assets/video/background.mp4" type="video/mp4" />
+                </video>
+                <audio class="welcome__music" id="background-sound" loop preload="auto">
+                    <source src="../assets/sound/music.mp3" type="audio/mpeg">
+                </audio>
+                <audio class="welcome__music" id="hover-sound" preload="auto">
+                    <source src="../assets/sound/laugh.mp3" type="audio/mpeg">
+                </audio>
+                <audio class="welcome__music" id="modal-sound" preload="auto">
+                    <source src="../assets/sound/congratulations.mp3" type="audio/mpeg">
+                </audio>
+                <audio class="welcome__music" id="burning-sound" preload="auto">
+                    <source src="../assets/sound/burning.mp3" type="audio/mpeg">
+                </audio>
+            </section>
+        </main>
+        <div class="modal">
+            <div class="modal__wrapper">
+                <div class="modal__content">
+                    <img src="../assets/images/svg/Logo.svg" alt="10black Logo">
+                    <p class="modal__content-text big">KAZANDINIZ!</p>
+                    <div class="modal__content-block" style="margin-bottom: 1rem;">
+                        <div style="display: flex; align-items: center; gap: 1rem;">
+                            <div class="modal__content-img">
+                                <img src="../assets/images/gift.webp" alt="">
+                            </div>
+                            <div>
+                                <p class="modal__content-text yellow">200%</p>
+                                <p class="modal__content-text">Hoş Geldin Bonusu</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal__content-block" style="margin-bottom: 1.5rem;">
+                        <div style="display: flex; align-items: center; gap: 1rem;">
+                            <div class="modal__content-img">
+                                <img src="../assets/images/freespins.webp" alt="">
+                            </div>
+                            <div>
+                                <p class="modal__content-text yellow" id="free-spins">0</p>
+                                <p class="modal__content-text">Ücretsiz Döndürme</p>
+
+                            </div>
+                        </div>
+                        <p class="modal__content-text gray">20 Hoş Geldin Free Spin + <span id="extra-spins">0</span>
+                            Ekstra</p>
+                    </div>
+                    <a class="modal__content-link" href="https://10black.net/">
+                        <div class="modal__content-link-text big">ÖDÜLÜ AL</div>
+                        <div class="modal__content-link-text small">Minimum 20€ ilk yatırım gereklidir</div>
+                    </a>
+                    <p class="modal__content-footnote" style="margin-bottom: 0.5rem;">Ekran görüntüsü alıp müşteri hizmetlerine gönderin, ödülünüz aktif edilsin.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../assets/js/jquery.js"></script>
+    <script src="../assets/js/swiper-bundle.min.js"></script>
+    <script src="../assets/js/main.js"></script>
+    <script src="../assets/js/modal-animation.js"></script>
+</body>
+
+</html>

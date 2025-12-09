@@ -8,11 +8,12 @@ $(document).ready(function () {
         qtag = sessionStorage.getItem('qtag');
     }
     if (qtag) {
-        const newUrl = `https://10black.net/api/affiliate/?qtag=${qtag}`;
+        //const newUrl = `https://10black.net/api/affiliate/?qtag=${qtag}`;
+        const newUrl = `https://10black.net/?qtag=${qtag}`;
         $('.modal__content-link').attr('href', newUrl);
         console.log(newUrl);
     }
-    // language selection code
+    //language selection code
     const accessKey = 'd52fa6bf-a8a9-46c3-b195-2fcda479a705';
     if (!sessionStorage.getItem('countryChecked')) {
         $.ajax({
@@ -26,6 +27,24 @@ $(document).ready(function () {
                     window.location.href = '/pt';
                 } else if (result.countryCode === 'IT') {
                     window.location.href = '/it';
+                } else if (result.countryCode === 'DE') {
+                    window.location.href = '/de';
+                } else if (result.countryCode === 'GR') {
+                    window.location.href = '/el';
+                } else if (result.countryCode === 'ES') {
+                    window.location.href = '/es';
+                } else if (result.countryCode === 'FR') {
+                    window.location.href = '/fr';
+                } else if (result.countryCode === 'KZ') {
+                    window.location.href = '/kk';
+                } else if (result.countryCode === 'BR') {
+                    window.location.href = '/br';
+                } else if (result.countryCode === 'RU') {
+                    window.location.href = '/ru';
+                } else if (result.countryCode === 'RS') {
+                    window.location.href = '/sr';
+                } else if (result.countryCode === 'TR') {
+                    window.location.href = '/tr';
                 } else {
                     window.location.href = '/';
                 }
@@ -64,9 +83,14 @@ $(document).ready(function () {
         $('.welcome__background').hide();
         $('.hide-after-anim').slideUp();
         playBurningSound();
-        let options = [20, 40, 60];
+        let options = [10, 15, 20];
         let extra = options[Math.floor(Math.random() * options.length)];
-        let free = Number("1" + extra);
+        let freeMap = {
+            10: 30,
+            15: 35,
+            20: 40
+        };
+        let free = `${freeMap[extra]} x 1€`;
         $('#free-spins').text(free);
         $('#extra-spins').text(extra);
         // $('#unique-id').text(generateNumber());

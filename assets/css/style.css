@@ -852,6 +852,7 @@ video::-webkit-media-controls {
     font-size: 2rem;
     font-weight: 800;
     margin-bottom: 0.5rem;
+    text-transform: none;
 }
 
 .modal__content-text.gray {
