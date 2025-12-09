@@ -46,7 +46,7 @@ $(document).ready(function () {
                 } else if (result.countryCode === 'TR') {
                     window.location.href = '/tr';
                 } else {
-                    window.location.href = '/';
+                    //window.location.href = '/';
                 }
             }
         });
@@ -77,7 +77,7 @@ $(document).ready(function () {
         fireBoxImage.addClass('active');
         setTimeout(() => {
             fireBoxImage.hide();
-        }, 7000);
+        }, 3000);
         const allBoxes = $('.welcome__box');
         allBoxes.not(clickedBox).addClass('hidden');
         $('.welcome__background').hide();
