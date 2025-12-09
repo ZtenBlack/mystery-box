@@ -46,7 +46,7 @@ $(document).ready(function () {
                 } else if (result.countryCode === 'TR') {
                     window.location.href = '/tr';
                 } else {
-                    //window.location.href = '/';
+                    window.location.href = '/';
                 }
             }
         });
